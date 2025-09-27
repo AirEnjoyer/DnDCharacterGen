@@ -6,6 +6,18 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <vector>
+
+void sleep(long int input) {
+  std::this_thread::sleep_for(std::chrono::milliseconds(input));
+}
+
+void printStats(int stats[]) {
+  for (int i = 0; i < 5; i++) {
+    std::cout << stats[i] << " ";
+    sleep(450);
+  }
+}
 
 void getHitDice(int *hitDiceType, int *characterClass) {
   switch (*characterClass) {
@@ -57,6 +69,8 @@ void getStat(int *statSum, int *rolls, int amountOfRolls) {
 
 int main() {
 
+  system("clear");
+
   const int amountOfRolls = 4;
   int rolls[amountOfRolls];
   int statSum, characterLevel, healthSum, characterClass, hitDiceType;
@@ -72,20 +86,37 @@ int main() {
   std::cin >> characterClass;
 
   getHitDice(&hitDiceType, &characterClass);
+  system("clear");
 
   std::cout << "Enter the character level" << std::endl;
   std::cin >> characterLevel;
   std::cout << std::endl;
 
-  for (int i = 0; i < 4; i++) {
-    std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+  system("clear");
+  std::vector<int> stats;
+  std::cout << "Generating stats, wait about 10 seconds" << std::endl;
+  for (int i = 0; i < 5; i++) {
+    sleep(2000);
     getStat(&statSum, rolls, amountOfRolls);
-    std::cout << statSum << std::endl;
+    stats.push_back(statSum);
+  }
+  std::cout << "Stats generated!" << std::endl;
+  sleep(1000);
+
+  system("clear");
+  std::cout << "Stats: " << std::endl;
+  for (int vals : stats) {
+    std::cout << vals << " " << std::flush;
+    sleep(450);
   }
 
+  std::cout << std::endl;
+
+  sleep(450);
   healthSum = hitDiceType;
   getMaxHP(&healthSum, &characterLevel, &hitDiceType);
-  std::cout << "Max HP: " << healthSum << std::endl;
+  std::cout << "Max HP: ";
+  std::cout << healthSum << std::endl;
 
   return 0;
 }
