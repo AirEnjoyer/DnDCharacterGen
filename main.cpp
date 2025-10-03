@@ -70,11 +70,6 @@ int main() {
   srand(static_cast<unsigned int>(time(NULL)));
   system("clear");
 
-  std::map<std::string, int *> statMap = {
-      {"Strength", &Strength},         {"Dexterity", &Dexterity},
-      {"Constitution", &Constitution}, {"Wisdom", &Wisdom},
-      {"Intelligence", &Intelligence}, {"Charisma", &Charisma}};
-
   const int amountOfRolls = 4;
   int rolls[amountOfRolls];
   int statSum, characterLevel, healthSum, characterClass, hitDiceType;
@@ -99,63 +94,6 @@ int main() {
 
   std::cout << "Enter the character level" << std::endl;
   std::cin >> characterLevel;
-  std::cout << std::endl;
-
-  system("clear");
-  std::vector<int> stats;
-  std::cout << "Generating stats, wait about 10 seconds" << std::endl;
-  for (int i = 0; i < 6; i++) {
-    sleep(2000);
-    getStat(&statSum, rolls, amountOfRolls);
-    stats.push_back(statSum);
-  }
-  std::cout << "Stats generated!" << std::endl;
-  sleep(1000);
-
-  system("clear");
-  std::cout << "Stats: " << std::endl;
-  std::sort(stats.begin(), stats.end(), std::greater<int>());
-  int choice;
-  for (int vals : stats) {
-    std::cout << vals << " " << std::flush;
-    sleep(450);
-  }
-  for (int i = 0; i < 6; i++) {
-    std::cout << "What would you like to assign " << stats[i] << " to? "
-              << std::endl
-              << std::flush;
-    for (int j = 0; j < 6; j++) {
-      std::cout << j + 1 << ". " << statNames[j] << std::endl;
-    }
-    std::cin >> choice;
-    switch (choice) {
-    case 1:
-      Strength = stats[i];
-      statNames.erase(statNames.begin() + 0);
-      break;
-    case 2:
-      Dexterity = stats[i];
-      statNames.erase(statNames.begin() + 1);
-      break;
-    case 3:
-      Constitution = stats[i];
-      statNames.erase(statNames.begin() + 2);
-      break;
-    case 4:
-      Wisdom = stats[i];
-      statNames.erase(statNames.begin() + 3);
-      break;
-    case 5:
-      Intelligence = stats[i];
-      statNames.erase(statNames.begin() + 4);
-      break;
-    case 6:
-      Charisma = stats[i];
-      statNames.erase(statNames.begin() + 4);
-      break;
-    }
-  }
-
   std::cout << std::endl;
 
   sleep(450);
