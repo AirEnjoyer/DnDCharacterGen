@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <ctime>
+#include <functional>
 #include <iostream>
 #include <string>
 #include <thread>
@@ -105,6 +106,7 @@ int main() {
 
   system("clear");
   std::cout << "Stats: " << std::endl;
+  std::sort(stats.begin(), stats.end(), std::greater<int>());
   for (int vals : stats) {
     std::cout << vals << " " << std::flush;
     sleep(450);
