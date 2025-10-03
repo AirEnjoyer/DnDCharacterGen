@@ -11,6 +11,16 @@
 #include <vector>
 #include <utility>
 
+void clearScreen(){
+
+#ifdef _WIN32
+    system("cls");
+#else 
+    system("clear");
+  #endif 
+  
+}
+
 void sleep(long int input) {
   std::this_thread::sleep_for(std::chrono::milliseconds(input));
 }
@@ -50,11 +60,26 @@ void getHitDice(int &hitDiceType, int &characterClass) {
   }
 }
 
-void getMaxHP(int &maxHP, int &characterLevel, int &hitDiceType, int &conMod) {
-  for (int i = 0; i < characterLevel - 1; ++i) {
-    maxHP += (rand() % hitDiceType - 1) + 1;
+void getMaxHP(int &healthSum, int &characterLevel, int &hitDiceType, int &conMod) {
+  std::cout << "Do you want to simulate rolling for health? If you don't, the average will be used. Y for yes N for no" << std::endl << std::flush;
+  char rollForHp;
+  bool roll;
+  std::cin >> rollForHp;
+  if (rollForHp == 'Y' || rollForHp == 'y'){
+    roll = true;
+  } else {
+    roll = false;
   }
-  maxHP += conMod * characterLevel;
+
+  
+  if (roll){
+  for (int i = 0; i < characterLevel - 1; ++i) {
+    healthSum += (rand() % hitDiceType - 1) + 1;
+  }
+  } else {
+    healthSum += ((hitDiceType / 2 ) + 1) * characterLevel;
+  }
+  healthSum += conMod * characterLevel;
 }
 
 void getStat(int &statSum, std::vector<int> &rolls,
@@ -75,7 +100,7 @@ void getStat(int &statSum, std::vector<int> &rolls,
 
 int main() {
   srand(static_cast<unsigned int>(time(NULL)));
-  system("clear");
+  clearScreen();
 
   std::vector<int> stats;
   std::vector<int> rolls;
@@ -90,28 +115,34 @@ int main() {
                           "Wizard"};
 
   std::cout << "Enter Your Class" << std::endl;
+    int e = 1;
   for (const std::string& currentClass : classes){
-    std::cout << currentClass << std::endl;
+    std::cout << e << ": " << currentClass << std::endl;
+    e++;
   }
   std::cin >> characterClass;
-  system("clear");
+  clearScreen();
 
 
 
   getHitDice(hitDiceType, characterClass);
   std::cout << "Enter the character level" << std::endl << std::flush;
   std::cin >> characterLevel;
-  system("clear");
+  clearScreen();
 
 
   int choice;
+  std::cout << "Generating Stats" << std::endl;
   getStat(statSum, rolls, 
              stats);
+  std::cout << "Stats Generated!" << std::endl << std::flush;
+  sleep(500);
+  clearScreen();
 
   std::map<std::string, int> statsByName;
     std::sort(stats.begin(), stats.end(), std::greater<int>());
   for (std::string currentStatName : statNames){
-    system("clear");
+    clearScreen();
     std::cout << "What would you like to assign to " << currentStatName << "? Pick by number." << std::endl;
     for (int currentStat : stats){
       std::cout << currentStat<< std::endl << std::flush;
@@ -122,12 +153,6 @@ int main() {
   }
 
 
-  std::cout << "Strength: " << statsByName["Strength"]<< std::endl;
-  std::cout << "Dexterity: " << statsByName["Dexterity"]<< std::endl;
-  std::cout << "Constitution: " << statsByName["Constitution"]<< std::endl;
-  std::cout << "Wisdom: " << statsByName["Wisdom"]<< std::endl;
-  std::cout << "Intelligence: " << statsByName["Intelligence"]<< std::endl;
-  std::cout << "Charisma: " << statsByName["Charisma"]<< std::endl;
 
   std::cout << std::endl;
 
@@ -141,6 +166,13 @@ int main() {
   sleep(450);
   healthSum = hitDiceType;
   getMaxHP(healthSum, characterLevel, hitDiceType, conMod);
+  clearScreen();
+  std::cout << "Strength: " << statsByName["Strength"]<< std::endl;
+  std::cout << "Dexterity: " << statsByName["Dexterity"]<< std::endl;
+  std::cout << "Constitution: " << statsByName["Constitution"]<< std::endl;
+  std::cout << "Wisdom: " << statsByName["Wisdom"]<< std::endl;
+  std::cout << "Intelligence: " << statsByName["Intelligence"]<< std::endl;
+  std::cout << "Charisma: " << statsByName["Charisma"]<< std::endl;
   std::cout << "Max HP: ";
   std::cout << healthSum << std::endl;
 
