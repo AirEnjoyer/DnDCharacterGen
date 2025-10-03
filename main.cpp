@@ -95,7 +95,7 @@ int main() {
   system("clear");
   std::vector<int> stats;
   std::cout << "Generating stats, wait about 10 seconds" << std::endl;
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 6; i++) {
     sleep(2000);
     getStat(&statSum, rolls, amountOfRolls);
     stats.push_back(statSum);

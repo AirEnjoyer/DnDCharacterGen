@@ -1,0 +1,3 @@
+/home/nick/DnDCharacterGen/CMakeFiles/CharacterGen.dir
+/home/nick/DnDCharacterGen/CMakeFiles/edit_cache.dir
+/home/nick/DnDCharacterGen/CMakeFiles/rebuild_cache.dir
