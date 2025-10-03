@@ -54,15 +54,16 @@ void getMaxHP(int *maxHP, int *characterLevel, int *hitDiceType) {
   }
 }
 
-void getStat(int *statSum, int *rolls, int amountOfRolls) {
+void getStat(int &statSum, int *rolls, int amountOfRolls,
+             std::vector<int> &stats) {
   for (int j = 0; j < 6; j++) {
-    *statSum = 0;
+    statSum = 0;
     for (int i = 0; i < amountOfRolls; i++) {
       rolls[i] = (rand() % 6) + 1;
-      *statSum += rolls[i];
+      statSum += rolls[i];
     }
     int *lowestRoll = std::min_element(rolls, rolls + 4);
-    *statSum -= *lowestRoll;
+    statSum -= *lowestRoll;
   }
 }
 
@@ -70,6 +71,7 @@ int main() {
   srand(static_cast<unsigned int>(time(NULL)));
   system("clear");
 
+  std::vector<int> stats;
   const int amountOfRolls = 4;
   int rolls[amountOfRolls];
   int statSum, characterLevel, healthSum, characterClass, hitDiceType;
