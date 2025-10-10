@@ -28,34 +28,31 @@ int stat::returnScore() { return score; }
 
 int stat::returnModifier() { return modifier; }
 
-void pickStats() {
+void genStats() {
   std::vector<int> tempRolls;
-  srand(static_cast<unsigned int>(time(0)));
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i <= 5; i++) {
     for (int j = 0; j < 4; j++) {
       tempRolls.push_back((rand() % 6) + 1);
     }
+    int statSum = std::accumulate(tempRolls.begin(), tempRolls.end(), 0);
+
     auto lowestRoll = std::min_element(tempRolls.begin(), tempRolls.end());
-    int sum = std::accumulate(tempRolls.begin(), tempRolls.end(), 0);
-    sum -= *lowestRoll;
-    statRolls.push_back(sum);
-    sum = 0;
+    statSum -= *lowestRoll;
+    statRolls.push_back(statSum);
     tempRolls.erase(tempRolls.begin(), tempRolls.end());
   }
-  std::sort(statRolls.begin(), statRolls.end(), std::greater<int>());
-  for (int i = 0; i <= 5; i++) {
-    int k = 1;
-    int choice = 0;
+}
+
+void pickStats() {
+  for (stat currentStat : stats) {
     clearScreen();
-    std::cout << "What would you like to assign to " << stats[i].returnName()
-              << "? Pick by number, first number is 1, second is 2, etc"
+    std::cout << "What would you like to assign to " << currentStat.returnName()
               << std::endl;
-    for (int currentStat : statRolls) {
-      std::cout << k << ". " << currentStat << std::endl;
-      k++;
+    for (int currentRoll : statRolls) {
+      std::cout << currentRoll << std::endl;
     }
+    int choice;
     std::cin >> choice;
-    stats[i].setStat(statRolls[choice - 1]);
-    statRolls.erase(statRolls.begin() + choice - 1);
+    currentStat.setStat(statRolls[choice - 1]);
   }
 }

@@ -21,17 +21,17 @@ void Save::addProficiency() {
 int Save::returnValue() { return saveValue; }
 
 std::vector<Save> saves = {
-    Save("Strength Save", classes[classPicked - 1].returnIsProficient(0),
+    Save("Strength Save", classes[classPicked].returnIsProficient(0),
          stats[0].returnModifier()),
-    Save("Dexterity Save", classes[classPicked - 1].returnIsProficient(1),
+    Save("Dexterity Save", classes[classPicked].returnIsProficient(1),
          stats[1].returnModifier()),
-    Save("Constitution Save", classes[classPicked - 1].returnIsProficient(2),
+    Save("Constitution Save", classes[classPicked].returnIsProficient(2),
          stats[2].returnModifier()),
-    Save("Wisdom Save", classes[classPicked - 1].returnIsProficient(3),
+    Save("Wisdom Save", classes[classPicked].returnIsProficient(3),
          stats[3].returnModifier()),
-    Save("Intelligence Save", classes[classPicked - 1].returnIsProficient(4),
+    Save("Intelligence Save", classes[classPicked].returnIsProficient(4),
          stats[4].returnModifier()),
-    Save("Charisma Save", classes[classPicked - 1].returnIsProficient(5),
+    Save("Charisma Save", classes[classPicked].returnIsProficient(5),
          stats[5].returnModifier()),
 };
 

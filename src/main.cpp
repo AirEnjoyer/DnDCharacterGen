@@ -1,11 +1,14 @@
 #include "Class.hpp"
 #include "Clear.hpp"
 #include "stat.hpp"
+#include <cstdlib>
 #include <iostream>
 
 int main() {
-  pickClass();
+  srand(time(0));
+  genStats();
   pickStats();
+  pickClass();
 
   clearScreen();
 

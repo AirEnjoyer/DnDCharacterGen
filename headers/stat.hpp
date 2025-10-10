@@ -18,7 +18,10 @@ public:
   int returnModifier();
 };
 
+void genStats();
 void pickStats();
+
+extern std::vector<int> statRolls;
 extern std::vector<stat> stats;
 
 #endif
