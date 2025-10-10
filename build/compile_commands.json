@@ -11,6 +11,16 @@
 },
 {
   "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/HP.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/HP.cpp",
+  "file": "/home/nicholasmilligan/DnDCharacterGen/src/HP.cpp"
+},
+{
+  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Level.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/Level.cpp",
+  "file": "/home/nicholasmilligan/DnDCharacterGen/src/Level.cpp"
+},
+{
+  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
   "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/main.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/main.cpp",
   "file": "/home/nicholasmilligan/DnDCharacterGen/src/main.cpp"
 },

@@ -1,4 +1,5 @@
 #include "stat.hpp"
+#include "ClearScreen.hpp"
 #include <numeric>
 #include <algorithm>
 #include <iostream>
@@ -15,6 +16,7 @@ stat::stat(std::string Name){
 }
 
 void stat::pickStat(std::vector<int> &rolls){
+  ClearScreen();
   std::cout << "What would you like to assign to " << name << "? Pick by number (first option is one, second is 2, etc.)" << std::endl;
   for (int currentRoll : rolls){
     std::cout << currentRoll << std::endl;
