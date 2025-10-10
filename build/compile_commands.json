@@ -1,43 +1,43 @@
 [
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Classes.cpp.o -c /home/nick/CharacterGen/src/Classes.cpp",
-  "file": "/home/nick/CharacterGen/src/Classes.cpp",
-  "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/Classes.cpp.o"
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Class.cpp.o -c /home/nick/CharacterGen/src/Class.cpp",
+  "file": "/home/nick/CharacterGen/src/Class.cpp",
+  "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/Class.cpp.o"
 },
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Clear.cpp.o -c /home/nick/CharacterGen/src/Clear.cpp",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Clear.cpp.o -c /home/nick/CharacterGen/src/Clear.cpp",
   "file": "/home/nick/CharacterGen/src/Clear.cpp",
   "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/Clear.cpp.o"
 },
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Level.cpp.o -c /home/nick/CharacterGen/src/Level.cpp",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/HP.cpp.o -c /home/nick/CharacterGen/src/HP.cpp",
+  "file": "/home/nick/CharacterGen/src/HP.cpp",
+  "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/HP.cpp.o"
+},
+{
+  "directory": "/home/nick/CharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Level.cpp.o -c /home/nick/CharacterGen/src/Level.cpp",
   "file": "/home/nick/CharacterGen/src/Level.cpp",
   "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/Level.cpp.o"
 },
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Saves.cpp.o -c /home/nick/CharacterGen/src/Saves.cpp",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Saves.cpp.o -c /home/nick/CharacterGen/src/Saves.cpp",
   "file": "/home/nick/CharacterGen/src/Saves.cpp",
   "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/Saves.cpp.o"
 },
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/getHome.cpp.o -c /home/nick/CharacterGen/src/getHome.cpp",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/getHome.cpp.o -c /home/nick/CharacterGen/src/getHome.cpp",
   "file": "/home/nick/CharacterGen/src/getHome.cpp",
   "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/getHome.cpp.o"
 },
 {
   "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/main.cpp.o -c /home/nick/CharacterGen/src/main.cpp",
-  "file": "/home/nick/CharacterGen/src/main.cpp",
-  "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/main.cpp.o"
-},
-{
-  "directory": "/home/nick/CharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/stat.cpp.o -c /home/nick/CharacterGen/src/stat.cpp",
+  "command": "/usr/bin/c++ -I/home/nick/CharacterGen/headers  -fsanitize=address,undefined -g -g -O0 -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/stat.cpp.o -c /home/nick/CharacterGen/src/stat.cpp",
   "file": "/home/nick/CharacterGen/src/stat.cpp",
   "output": "/home/nick/CharacterGen/build/CMakeFiles/CharacterGen.dir/src/stat.cpp.o"
 }

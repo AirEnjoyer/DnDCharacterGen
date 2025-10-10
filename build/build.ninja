@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: CharacterGen
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,51 +49,58 @@ cmake_ninja_workdir = /home/nick/CharacterGen/build/
 
 build cmake_object_order_depends_target_CharacterGen: phony || .
 
-build CMakeFiles/CharacterGen.dir/src/Classes.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/Classes.cpp || cmake_object_order_depends_target_CharacterGen
-  DEP_FILE = CMakeFiles/CharacterGen.dir/src/Classes.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+build CMakeFiles/CharacterGen.dir/src/Class.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/Class.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/CharacterGen.dir/src/Class.cpp.o.d
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
 
-build CMakeFiles/CharacterGen.dir/src/Clear.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/Clear.cpp || cmake_object_order_depends_target_CharacterGen
+build CMakeFiles/CharacterGen.dir/src/Clear.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/Clear.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/Clear.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
 
-build CMakeFiles/CharacterGen.dir/src/Level.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/Level.cpp || cmake_object_order_depends_target_CharacterGen
+build CMakeFiles/CharacterGen.dir/src/HP.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/HP.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/CharacterGen.dir/src/HP.cpp.o.d
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
+  INCLUDES = -I/home/nick/CharacterGen/headers
+  OBJECT_DIR = CMakeFiles/CharacterGen.dir
+  OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
+
+build CMakeFiles/CharacterGen.dir/src/Level.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/Level.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/Level.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
 
-build CMakeFiles/CharacterGen.dir/src/Saves.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/Saves.cpp || cmake_object_order_depends_target_CharacterGen
+build CMakeFiles/CharacterGen.dir/src/Saves.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/Saves.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/Saves.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
 
-build CMakeFiles/CharacterGen.dir/src/getHome.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/getHome.cpp || cmake_object_order_depends_target_CharacterGen
+build CMakeFiles/CharacterGen.dir/src/getHome.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/getHome.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/getHome.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
 
-build CMakeFiles/CharacterGen.dir/src/main.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/main.cpp || cmake_object_order_depends_target_CharacterGen
-  DEP_FILE = CMakeFiles/CharacterGen.dir/src/main.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
-  INCLUDES = -I/home/nick/CharacterGen/headers
-  OBJECT_DIR = CMakeFiles/CharacterGen.dir
-  OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
-
-build CMakeFiles/CharacterGen.dir/src/stat.cpp.o: CXX_COMPILER__CharacterGen_unscanned_ /home/nick/CharacterGen/src/stat.cpp || cmake_object_order_depends_target_CharacterGen
+build CMakeFiles/CharacterGen.dir/src/stat.cpp.o: CXX_COMPILER__CharacterGen_unscanned_Debug /home/nick/CharacterGen/src/stat.cpp || cmake_object_order_depends_target_CharacterGen
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/stat.cpp.o.d
-  FLAGS = -fsanitize=address,undefined -std=gnu++20
+  FLAGS = -fsanitize=address,undefined -g -g -O0 -std=gnu++20
   INCLUDES = -I/home/nick/CharacterGen/headers
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
@@ -101,9 +113,10 @@ build CMakeFiles/CharacterGen.dir/src/stat.cpp.o: CXX_COMPILER__CharacterGen_uns
 #############################################
 # Link the executable CharacterGen
 
-build CharacterGen: CXX_EXECUTABLE_LINKER__CharacterGen_ CMakeFiles/CharacterGen.dir/src/Classes.cpp.o CMakeFiles/CharacterGen.dir/src/Clear.cpp.o CMakeFiles/CharacterGen.dir/src/Level.cpp.o CMakeFiles/CharacterGen.dir/src/Saves.cpp.o CMakeFiles/CharacterGen.dir/src/getHome.cpp.o CMakeFiles/CharacterGen.dir/src/main.cpp.o CMakeFiles/CharacterGen.dir/src/stat.cpp.o
+build CharacterGen: CXX_EXECUTABLE_LINKER__CharacterGen_Debug CMakeFiles/CharacterGen.dir/src/Class.cpp.o CMakeFiles/CharacterGen.dir/src/Clear.cpp.o CMakeFiles/CharacterGen.dir/src/HP.cpp.o CMakeFiles/CharacterGen.dir/src/Level.cpp.o CMakeFiles/CharacterGen.dir/src/Saves.cpp.o CMakeFiles/CharacterGen.dir/src/getHome.cpp.o CMakeFiles/CharacterGen.dir/src/stat.cpp.o
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/CharacterGen.dir/link.d
-  FLAGS = -fsanitize=address,undefined
+  FLAGS = -fsanitize=address,undefined -g -g -O0
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/CharacterGen.dir/link.d
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   POST_BUILD = :
