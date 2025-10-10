@@ -1,21 +1,19 @@
-#include "Class.hpp"
-#include "Clear.hpp"
+#include <iostream>
+#include <string>
+#include <vector>
 #include "stat.hpp"
 #include <cstdlib>
-#include <iostream>
+#include <ctime>
 
-int main() {
-  srand(time(0));
-  genStats();
-  pickStats();
-  pickClass();
-
-  clearScreen();
-
-  for (int i = 0; i <= 5; i++) {
-    std::cout << stats[i].returnName() << ": " << stats[i].returnScore()
-              << std::endl;
-  }
-
+int main(){
+  srand(time(NULL));
+  std::vector<int> rolls;
+  genStats(rolls);
+  Strength.pickStat(rolls);
+  Dexterity.pickStat(rolls);
+  Constitution.pickStat(rolls);
+  Wisdom.pickStat(rolls);
+  Intelligence.pickStat(rolls);
+  Charisma.pickStat(rolls);
   return 0;
 }

@@ -1,58 +1,58 @@
 #include "stat.hpp"
-#include "Clear.hpp"
-#include <algorithm>
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
 #include <numeric>
+#include <algorithm>
+#include <iostream>
+#include <string>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
+#include <functional>
 
-stat::stat(std::string Name) {
+stat::stat(std::string Name){
   name = Name;
   score = 0;
   modifier = 0;
 }
 
-void stat::setStat(int Score) {
-  score = Score;
-  modifier = (score - 10) / 2;
+void stat::pickStat(std::vector<int> &rolls){
+  std::cout << "What would you like to assign to " << name << "? Pick by number (first option is one, second is 2, etc.)" << std::endl;
+  for (int currentRoll : rolls){
+    std::cout << currentRoll << std::endl;
+  }
+  int choice;
+  std::cin >> choice;
+  choice--;
+  score = rolls[choice];
+  modifier = ((score - 10) / 2);
+  rolls.erase(rolls.begin() + choice);
+};
+
+int stat::returnScore(){
+  return score;
 }
 
-std::string stat::returnName() { return name; }
-std::vector<int> statRolls;
-std::vector<stat> stats = {stat("Strength"),     stat("Dexterity"),
-                           stat("Constituion"),  stat("Wisdom"),
-                           stat("Intelligence"), stat("Charisma")};
+int stat::returnModifier(){
+  return modifier;
+}
 
-int stat::returnScore() { return score; }
+stat Strength("Strength");
+stat Dexterity("Dexterity");
+stat Constitution("Constitution");
+stat Wisdom("Wisdom");
+stat Intelligence("Intelligence");
+stat Charisma("Charisma");
 
-int stat::returnModifier() { return modifier; }
-
-void genStats() {
+void genStats(std::vector<int> &rolls){
+  for (int i = 0; i <= 5; i++){
   std::vector<int> tempRolls;
-  for (int i = 0; i <= 5; i++) {
-    for (int j = 0; j < 4; j++) {
-      tempRolls.push_back((rand() % 6) + 1);
-    }
-    int statSum = std::accumulate(tempRolls.begin(), tempRolls.end(), 0);
-
+  for (int i = 0; i < 4; i ++){
+    tempRolls.push_back((rand() % 6) + 1);
+  }
+int statSum = std::accumulate(tempRolls.begin(), tempRolls.end(), 0);
     auto lowestRoll = std::min_element(tempRolls.begin(), tempRolls.end());
     statSum -= *lowestRoll;
-    statRolls.push_back(statSum);
+    rolls.push_back(statSum);
     tempRolls.erase(tempRolls.begin(), tempRolls.end());
-  }
-}
-
-void pickStats() {
-  for (stat currentStat : stats) {
-    clearScreen();
-    std::cout << "What would you like to assign to " << currentStat.returnName()
-              << std::endl;
-    for (int currentRoll : statRolls) {
-      std::cout << currentRoll << std::endl;
-    }
-    int choice;
-    std::cin >> choice;
-    currentStat.setStat(statRolls[choice - 1]);
+    std::sort(rolls.begin(), rolls.end(), std::greater<int>());
   }
 }

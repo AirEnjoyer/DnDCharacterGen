@@ -7,8 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined")
-
 project(CharacterGen CXX)
 
 set(SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")

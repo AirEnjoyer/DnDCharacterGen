@@ -3,25 +3,19 @@
 
 #include <string>
 #include <vector>
-
 class stat {
 private:
-  std::string name;
+std::string name;
   int score;
   int modifier;
-
-public:
+  public:
   stat(std::string Name);
-  void setStat(int Score);
+  void pickStat(std::vector<int> &rolls);
   std::string returnName();
   int returnScore();
   int returnModifier();
 };
-
-void genStats();
-void pickStats();
-
-extern std::vector<int> statRolls;
-extern std::vector<stat> stats;
+ void genStats(std::vector<int> &rolls);
+  extern stat Strength, Dexterity, Constitution, Wisdom, Intelligence, Charisma;
 
 #endif
