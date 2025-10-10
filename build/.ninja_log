@@ -1,0 +1,10 @@
+# ninja log v6
+2	628	1760058982095316764	CMakeFiles/CharacterGen.dir/src/main.cpp.o	6a8c5c5494c008c6
+628	742	1760058982721341051	CharacterGen	c61eca8aee918c30
+2	1652	1760058273365780851	CMakeFiles/CharacterGen.dir/src/Classes.cpp.o	f20beb0c817b77a
+2	1959	1760058273366933343	CMakeFiles/CharacterGen.dir/src/stat.cpp.o	93c06027119723f0
+2	51	1760058578142634744	CMakeFiles/CharacterGen.dir/src/Clear.cpp.o	2cccfa53d284a50d
+1	508	1760059070933763004	CMakeFiles/CharacterGen.dir/src/getHome.cpp.o	239c5f4b2cdfcbee
+508	625	1760059071440782671	CharacterGen	e1012ec3302dde9e
+1	643	1760059118295600016	CMakeFiles/CharacterGen.dir/src/main.cpp.o	6a8c5c5494c008c6
+643	759	1760059118937624917	CharacterGen	e1012ec3302dde9e

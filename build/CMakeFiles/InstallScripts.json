@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/nick/CharacterGen/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
