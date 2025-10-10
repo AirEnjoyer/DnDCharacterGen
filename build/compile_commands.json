@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/saves.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/saves.cpp",
+  "file": "/home/nicholasmilligan/DnDCharacterGen/src/saves.cpp"
+},
+{
+  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
   "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/stat.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/stat.cpp",
   "file": "/home/nicholasmilligan/DnDCharacterGen/src/stat.cpp"
 }

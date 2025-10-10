@@ -9,10 +9,12 @@ std::string saveStat;
   int saveValue;
   bool proficient;
 public:
-save(std::string saveName, int statMod);
+save(std::string SaveName, int statMod);
   void setProficient(bool isProficient, int &proficiencyBonus);
+  int returnValue();
+  bool returnIsProficient();
 };
 
-extern std::vector<save> saves;
+extern save StrengthSave, DexteritySave, ConstitutionSave, WisdomSave, IntelligenceSave, CharismaSave;
 
 #endif

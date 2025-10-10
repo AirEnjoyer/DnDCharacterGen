@@ -13,7 +13,6 @@ std::vector<bool> saves;
 std::string returnName();
   int returnHitDice();
   bool returnSave(int index);
-  
 };
 
   extern std::vector<Class> classes;

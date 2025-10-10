@@ -6,7 +6,7 @@
 
 Class::Class(std::string name, int hitDiceType, int save1, int save2){
   className = name;
-  for (int i = 0; i <= 5; i++){
+  for (int i = 0; i <= 6; i++){
     saves.push_back(false);
   }
   saves[save1] = true;
