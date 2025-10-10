@@ -1,3 +1,0 @@
-/home/nick/CharacterGen/CMakeFiles/CharacterGen.dir
-/home/nick/CharacterGen/CMakeFiles/edit_cache.dir
-/home/nick/CharacterGen/CMakeFiles/rebuild_cache.dir
