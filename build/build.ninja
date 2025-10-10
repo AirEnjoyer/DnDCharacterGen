@@ -44,6 +44,20 @@ cmake_ninja_workdir = /home/nicholasmilligan/DnDCharacterGen/build/
 
 build cmake_object_order_depends_target_CharacterGen: phony || CMakeFiles/CharacterGen.dir
 
+build CMakeFiles/CharacterGen.dir/src/Class.cpp.o: CXX_COMPILER__CharacterGen_ /home/nicholasmilligan/DnDCharacterGen/src/Class.cpp || cmake_object_order_depends_target_CharacterGen
+  DEP_FILE = CMakeFiles/CharacterGen.dir/src/Class.cpp.o.d
+  FLAGS = -std=gnu++20
+  INCLUDES = -I/home/nicholasmilligan/DnDCharacterGen/headers
+  OBJECT_DIR = CMakeFiles/CharacterGen.dir
+  OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
+
+build CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o: CXX_COMPILER__CharacterGen_ /home/nicholasmilligan/DnDCharacterGen/src/ClearScreen.cpp || cmake_object_order_depends_target_CharacterGen
+  DEP_FILE = CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o.d
+  FLAGS = -std=gnu++20
+  INCLUDES = -I/home/nicholasmilligan/DnDCharacterGen/headers
+  OBJECT_DIR = CMakeFiles/CharacterGen.dir
+  OBJECT_FILE_DIR = CMakeFiles/CharacterGen.dir/src
+
 build CMakeFiles/CharacterGen.dir/src/main.cpp.o: CXX_COMPILER__CharacterGen_ /home/nicholasmilligan/DnDCharacterGen/src/main.cpp || cmake_object_order_depends_target_CharacterGen
   DEP_FILE = CMakeFiles/CharacterGen.dir/src/main.cpp.o.d
   FLAGS = -std=gnu++20
@@ -66,7 +80,7 @@ build CMakeFiles/CharacterGen.dir/src/stat.cpp.o: CXX_COMPILER__CharacterGen_ /h
 #############################################
 # Link the executable CharacterGen
 
-build CharacterGen: CXX_EXECUTABLE_LINKER__CharacterGen_ CMakeFiles/CharacterGen.dir/src/main.cpp.o CMakeFiles/CharacterGen.dir/src/stat.cpp.o
+build CharacterGen: CXX_EXECUTABLE_LINKER__CharacterGen_ CMakeFiles/CharacterGen.dir/src/Class.cpp.o CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o CMakeFiles/CharacterGen.dir/src/main.cpp.o CMakeFiles/CharacterGen.dir/src/stat.cpp.o
   OBJECT_DIR = CMakeFiles/CharacterGen.dir
   POST_BUILD = :
   PRE_LINK = :
