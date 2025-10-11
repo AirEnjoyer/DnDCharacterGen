@@ -12,13 +12,13 @@ void writeToFile(int &MaxHP, int &classNumber) {
   std::string homeDir;
   getHome(homeDir);
   std::string mkdir = "mkdir " + homeDir + "/Characters";
-  std::system(mkdir.c_str());
+  std::system(homeDir.c_str());
   ClearScreen();
   std::string characterName;
   std::cout << "Enter your character's name: " << std::endl;
   std::cin >> characterName;
   ClearScreen();
-  std::string path = homeDir + "/Characters/" += characterName + ".txt";
+  std::string path = homeDir + characterName + ".txt";
   std::ofstream file(path);
   file << "Name: " << characterName << std::endl << std::endl;
   file << "Class " << classes[classNumber - 1].returnName() << std::endl;
