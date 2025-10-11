@@ -8,15 +8,16 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-#include <string>
 #include <vector>
 
 int main() {
   srand(time(NULL));
   ClearScreen();
   std::cout << "Pick your class by number: " << std::endl;
+  int num = 1;
   for (Class currentClass : classes) {
-    std::cout << currentClass.returnName() << std::endl;
+    std::cout << num << ": " << currentClass.returnName() << std::endl;
+    num++;
   }
   int classNumber;
   std::cin >> classNumber;
