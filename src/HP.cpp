@@ -1,5 +1,4 @@
 #include "HP.hpp"
-#include "Class.hpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -14,7 +13,7 @@ void getHP(int &MaxHP, int &characterLevel, int &hitDice) {
       MaxHP += ((rand() % hitDice) + 1);
     }
   } else {
-    for (int i = 0; i, characterLevel - 1; i++) {
+    for (int i = 0; i < characterLevel - 1; i++) {
       MaxHP += hitDice / 2;
     }
   }
