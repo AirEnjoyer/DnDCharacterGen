@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/nick/CharacterGen/build/cmake_install.cmake"
+		"/home/nick/DnDCharacterGen/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

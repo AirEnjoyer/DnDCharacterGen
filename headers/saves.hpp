@@ -2,19 +2,20 @@
 #define SAVES_HPP
 
 #include <string>
-#include <vector>
-class save{
+class save {
 private:
-std::string saveStat;
+  std::string saveStat;
   int saveValue;
   bool proficient;
+
 public:
-save(std::string SaveName, int statMod);
-  void setProficient(bool isProficient, int &proficiencyBonus);
+  save(std::string SaveName, int statMod);
+  void setValue(int value);
   int returnValue();
   bool returnIsProficient();
 };
 
-extern save StrengthSave, DexteritySave, ConstitutionSave, WisdomSave, IntelligenceSave, CharismaSave;
+extern save StrengthSave, DexteritySave, ConstitutionSave, WisdomSave,
+    IntelligenceSave, CharismaSave;
 
 #endif

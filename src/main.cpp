@@ -1,20 +1,21 @@
+#include "Class.hpp"
+#include "ClearScreen.hpp"
+#include "HP.hpp"
+#include "Level.hpp"
+#include "saves.hpp"
+#include "stat.hpp"
+#include "writeToFile.hpp"
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include <string>
 #include <vector>
-#include "HP.hpp"
-#include "stat.hpp"
-#include "Class.hpp"
-#include "ClearScreen.hpp"
-#include "Level.hpp"
-#include "saves.hpp"
-#include <cstdlib>
-#include <ctime>
 
-int main(){
+int main() {
   srand(time(NULL));
   ClearScreen();
   std::cout << "Pick your class by number: " << std::endl;
-  for (Class currentClass : classes){
+  for (Class currentClass : classes) {
     std::cout << currentClass.returnName() << std::endl;
   }
   int classNumber;
@@ -34,7 +35,7 @@ int main(){
   getLevel(characterLevel);
   ClearScreen();
   getProficiency(characterLevel, proficiencyBonus);
-  
+
   int hitDice = classes[classNumber - 1].returnHitDice();
   getHP(MaxHP, characterLevel, hitDice);
 
@@ -45,17 +46,27 @@ int main(){
   bool intelligenceProficient = classes[classNumber - 1].returnSave(4);
   bool charismaProficient = classes[classNumber - 1].returnSave(5);
 
-  StrengthSave.setProficient(strengthProficient, proficiencyBonus);
-  DexteritySave.setProficient(dexterityProficient, proficiencyBonus);
-  ConstitutionSave.setProficient(constitutionProficient, proficiencyBonus);
-  WisdomSave.setProficient(wisdomProficient, proficiencyBonus);
-  IntelligenceSave.setProficient(intelligenceProficient, proficiencyBonus);
-  CharismaSave.setProficient(charismaProficient, proficiencyBonus);
+  StrengthSave.setValue((Strength.returnModifier()) +
+                        (proficiencyBonus * strengthProficient));
 
-  std::cout <<  Strength.returnModifier() << std::endl;
-  std::cout << proficiencyBonus << std::endl;
-  std::cout << StrengthSave.returnIsProficient() << std::endl;
-  std::cout << StrengthSave.returnValue() << std::endl;
+  DexteritySave.setValue((Dexterity.returnModifier()) +
+                         (proficiencyBonus * dexterityProficient));
+
+  ConstitutionSave.setValue((Constitution.returnModifier()) +
+                            (proficiencyBonus * constitutionProficient));
+
+  WisdomSave.setValue((Wisdom.returnModifier()) +
+                      (proficiencyBonus * wisdomProficient));
+
+  IntelligenceSave.setValue((Intelligence.returnModifier()) +
+                            (proficiencyBonus * intelligenceProficient));
+
+  CharismaSave.setValue((Charisma.returnModifier()) +
+                        (proficiencyBonus * charismaProficient));
+
+  std::cout << MaxHP << std::endl;
+
+  writeToFile(MaxHP, classNumber);
 
   return 0;
 }

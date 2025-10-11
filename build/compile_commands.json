@@ -1,37 +1,56 @@
 [
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Class.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/Class.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/Class.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Class.cpp.o -c /home/nick/DnDCharacterGen/src/Class.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/Class.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/Class.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/ClearScreen.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/ClearScreen.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o -c /home/nick/DnDCharacterGen/src/ClearScreen.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/ClearScreen.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/ClearScreen.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/HP.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/HP.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/HP.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/HP.cpp.o -c /home/nick/DnDCharacterGen/src/HP.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/HP.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/HP.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Level.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/Level.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/Level.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/Level.cpp.o -c /home/nick/DnDCharacterGen/src/Level.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/Level.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/Level.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/main.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/main.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/main.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/getHome.cpp.o -c /home/nick/DnDCharacterGen/src/getHome.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/getHome.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/getHome.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/saves.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/saves.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/saves.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/main.cpp.o -c /home/nick/DnDCharacterGen/src/main.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/main.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/main.cpp.o"
 },
 {
-  "directory": "/home/nicholasmilligan/DnDCharacterGen/build",
-  "command": "/usr/bin/c++ -I/home/nicholasmilligan/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/stat.cpp.o -c /home/nicholasmilligan/DnDCharacterGen/src/stat.cpp",
-  "file": "/home/nicholasmilligan/DnDCharacterGen/src/stat.cpp"
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/saves.cpp.o -c /home/nick/DnDCharacterGen/src/saves.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/saves.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/saves.cpp.o"
+},
+{
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/stat.cpp.o -c /home/nick/DnDCharacterGen/src/stat.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/stat.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/stat.cpp.o"
+},
+{
+  "directory": "/home/nick/DnDCharacterGen/build",
+  "command": "/usr/bin/c++ -I/home/nick/DnDCharacterGen/headers -std=gnu++20 -o CMakeFiles/CharacterGen.dir/src/writeToFile.cpp.o -c /home/nick/DnDCharacterGen/src/writeToFile.cpp",
+  "file": "/home/nick/DnDCharacterGen/src/writeToFile.cpp",
+  "output": "/home/nick/DnDCharacterGen/build/CMakeFiles/CharacterGen.dir/src/writeToFile.cpp.o"
 }
 ]
