@@ -30,7 +30,20 @@ int main() {
   std::cin >> choice;
 
   if (choice == 'Y' || choice == 'y') {
+
     ClearScreen();
+    genStats(rolls);
+    Strength.pickStat(rolls);
+    Dexterity.pickStat(rolls);
+    Constitution.pickStat(rolls);
+    Intelligence.pickStat(rolls);
+    Wisdom.pickStat(rolls);
+    Charisma.pickStat(rolls);
+    ClearScreen();
+
+    ClearScreen();
+  } else {
+
     std::cout << "Enter the strength score (3 - 20)" << std::endl;
     int input;
     std::cin >> input;
@@ -55,16 +68,6 @@ int main() {
     std::cout << "Enter the charisma score (3 - 20)" << std::endl;
     std::cin >> input;
     Charisma.inputScore(input);
-    ClearScreen();
-  } else {
-    ClearScreen();
-    genStats(rolls);
-    Strength.pickStat(rolls);
-    Dexterity.pickStat(rolls);
-    Constitution.pickStat(rolls);
-    Intelligence.pickStat(rolls);
-    Wisdom.pickStat(rolls);
-    Charisma.pickStat(rolls);
     ClearScreen();
   }
 
