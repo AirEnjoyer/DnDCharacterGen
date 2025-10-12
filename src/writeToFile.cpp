@@ -22,7 +22,7 @@ void writeToFile(int &MaxHP, int &classNumber) {
   std::string path = homeDir + characterName + ".txt";
   std::ofstream file(path);
   file << "Name: " << characterName << std::endl << std::endl;
-  file << "Class " << classes[classNumber - 1].returnName() << std::endl;
+  file << "Class: " << classes[classNumber - 1].returnName() << std::endl;
   file << std::endl;
   file << "HP: " << MaxHP << std::endl;
   file << std::endl;

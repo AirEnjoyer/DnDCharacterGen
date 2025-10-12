@@ -15,6 +15,11 @@ stat::stat(std::string Name) {
   modifier = 0;
 }
 
+void stat::inputScore(int input) {
+  score = input;
+  modifier = (score - 10) / 2;
+}
+
 void stat::pickStat(std::vector<int> &rolls) {
   ClearScreen();
   std::cout << "What would you like to assign to " << name

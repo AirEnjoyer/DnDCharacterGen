@@ -24,14 +24,49 @@ int main() {
   std::cin >> classNumber;
   std::vector<int> rolls;
   ClearScreen();
-  genStats(rolls);
-  Strength.pickStat(rolls);
-  Dexterity.pickStat(rolls);
-  Constitution.pickStat(rolls);
-  Intelligence.pickStat(rolls);
-  Wisdom.pickStat(rolls);
-  Charisma.pickStat(rolls);
-  ClearScreen();
+  std::cout << "Do you want to roll for stats or use custom stats? (Y or N)"
+            << std::endl;
+  char choice;
+  std::cin >> choice;
+
+  if (choice == 'Y' || choice == 'y') {
+    ClearScreen();
+    std::cout << "Enter the strength score (3 - 18)" << std::endl;
+    int input;
+    std::cin >> input;
+    Strength.inputScore(input);
+    ClearScreen();
+    std::cout << "Enter the dexterity score (3 - 18)" << std::endl;
+    std::cin >> input;
+    Dexterity.inputScore(input);
+    ClearScreen();
+    std::cout << "Enter the constitution score (3 - 18)" << std::endl;
+    std::cin >> input;
+    Constitution.inputScore(input);
+    ClearScreen();
+    std::cout << "Enter the intelligence score (3 - 18)" << std::endl;
+    std::cin >> input;
+    Intelligence.inputScore(input);
+    ClearScreen();
+    std::cout << "Enter the wisdom score (3 - 18)" << std::endl;
+    std::cin >> input;
+    ClearScreen();
+    Wisdom.inputScore(input);
+    std::cout << "Enter the charisma score (3 - 18)" << std::endl;
+    std::cin >> input;
+    Charisma.inputScore(input);
+    ClearScreen();
+  } else {
+    ClearScreen();
+    genStats(rolls);
+    Strength.pickStat(rolls);
+    Dexterity.pickStat(rolls);
+    Constitution.pickStat(rolls);
+    Intelligence.pickStat(rolls);
+    Wisdom.pickStat(rolls);
+    Charisma.pickStat(rolls);
+    ClearScreen();
+  }
 
   int characterLevel, proficiencyBonus, MaxHP;
   getLevel(characterLevel);
@@ -125,10 +160,5 @@ int main() {
   CharismaSave.setValue((Charisma.returnModifier()) +
                         (proficiencyBonus * charismaProficient));
 
-  std::cout << MaxHP << std::endl;
-
   writeToFile(MaxHP, classNumber);
-  for (int i = 0; i < 18; i++) {
-    std::cout << skills[i].returnValue() << std::endl;
-  }
 }
