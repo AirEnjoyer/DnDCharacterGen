@@ -31,28 +31,28 @@ int main() {
 
   if (choice == 'Y' || choice == 'y') {
     ClearScreen();
-    std::cout << "Enter the strength score (3 - 18)" << std::endl;
+    std::cout << "Enter the strength score (3 - 20)" << std::endl;
     int input;
     std::cin >> input;
     Strength.inputScore(input);
     ClearScreen();
-    std::cout << "Enter the dexterity score (3 - 18)" << std::endl;
+    std::cout << "Enter the dexterity score (3 - 20)" << std::endl;
     std::cin >> input;
     Dexterity.inputScore(input);
     ClearScreen();
-    std::cout << "Enter the constitution score (3 - 18)" << std::endl;
+    std::cout << "Enter the constitution score (3 - 20)" << std::endl;
     std::cin >> input;
     Constitution.inputScore(input);
     ClearScreen();
-    std::cout << "Enter the intelligence score (3 - 18)" << std::endl;
+    std::cout << "Enter the intelligence score (3 - 20)" << std::endl;
     std::cin >> input;
     Intelligence.inputScore(input);
     ClearScreen();
-    std::cout << "Enter the wisdom score (3 - 18)" << std::endl;
+    std::cout << "Enter the wisdom score (3 - 20)" << std::endl;
     std::cin >> input;
     ClearScreen();
     Wisdom.inputScore(input);
-    std::cout << "Enter the charisma score (3 - 18)" << std::endl;
+    std::cout << "Enter the charisma score (3 - 20)" << std::endl;
     std::cin >> input;
     Charisma.inputScore(input);
     ClearScreen();
