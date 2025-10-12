@@ -3,6 +3,7 @@
 #include "HP.hpp"
 #include "Level.hpp"
 #include "saves.hpp"
+#include "skill.hpp"
 #include "stat.hpp"
 #include "writeToFile.hpp"
 #include <cstdlib>
@@ -27,8 +28,8 @@ int main() {
   Strength.pickStat(rolls);
   Dexterity.pickStat(rolls);
   Constitution.pickStat(rolls);
-  Wisdom.pickStat(rolls);
   Intelligence.pickStat(rolls);
+  Wisdom.pickStat(rolls);
   Charisma.pickStat(rolls);
   ClearScreen();
 
@@ -36,6 +37,65 @@ int main() {
   getLevel(characterLevel);
   ClearScreen();
   getProficiency(characterLevel, proficiencyBonus);
+
+  genSkills(classNumber, proficiencyBonus);
+
+  skills[0].setModifier(Strength.returnModifier());
+  for (int i = 1; i < 4; i++) {
+    skills[i].setModifier(Dexterity.returnModifier());
+  }
+  for (int i = 4; i < 9; i++) {
+    skills[i].setModifier(Intelligence.returnModifier());
+  }
+  for (int i = 9; i < 13; i++) {
+    skills[i].setModifier(Wisdom.returnModifier());
+  }
+  for (int i = 13; i < 18; i++) {
+    skills[i].setModifier(Charisma.returnModifier());
+  }
+
+  std::vector<int> indexes;
+  switch (classNumber) {
+  case 1:
+    indexes = {9, 0, 15, 7, 12, 13};
+    break;
+  case 2:
+    for (int i = 0; i < 18; i++)
+      indexes.push_back(i);
+    break;
+  case 3:
+    indexes = {5, 10, 17, 8};
+    break;
+  case 4:
+    indexes = {4, 9, 10, 11, 7, 12, 8, 13};
+    break;
+  case 5:
+    indexes = {1, 9, 0, 5, 7, 10, 15, 17, 12, 13};
+    break;
+  case 6:
+    indexes = {1, 0, 5, 10, 8, 3};
+    break;
+  case 7:
+    indexes = {0, 10, 15, 11, 17, 8};
+    break;
+  case 8:
+    indexes = {9, 0, 10, 6, 7, 12, 3, 13};
+    break;
+  case 9:
+    indexes = {1, 0, 14, 10, 15, 6, 12, 17, 2, 3};
+    break;
+  case 10:
+    indexes = {4, 14, 10, 15, 17, 8};
+    break;
+  case 11:
+    indexes = {4, 14, 5, 15, 6, 7, 8};
+    break;
+  case 12:
+    indexes = {4, 5, 10, 6, 11, 7, 8};
+    break;
+  }
+
+  classes[classNumber - 1].pickSkills(proficiencyBonus, indexes);
 
   int hitDice = classes[classNumber - 1].returnHitDice();
   getHP(MaxHP, characterLevel, hitDice);
@@ -68,6 +128,7 @@ int main() {
   std::cout << MaxHP << std::endl;
 
   writeToFile(MaxHP, classNumber);
-
-  return 0;
+  for (int i = 0; i < 18; i++) {
+    std::cout << skills[i].returnValue() << std::endl;
+  }
 }

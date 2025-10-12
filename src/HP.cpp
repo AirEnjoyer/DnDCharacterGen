@@ -1,4 +1,5 @@
 #include "HP.hpp"
+#include "stat.hpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -10,11 +11,11 @@ void getHP(int &MaxHP, int &characterLevel, int &hitDice) {
   MaxHP = hitDice;
   if (choice == 'Y' || choice == 'y') {
     for (int i = 0; i < characterLevel - 1; i++) {
-      MaxHP += ((rand() % hitDice) + 1);
+      MaxHP += ((rand() % hitDice) + 1) + Constitution.returnModifier();
     }
   } else {
     for (int i = 0; i < characterLevel - 1; i++) {
-      MaxHP += hitDice / 2;
+      MaxHP += (hitDice / 2) + Constitution.returnModifier();
     }
   }
 }
