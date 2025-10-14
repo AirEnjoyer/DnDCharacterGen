@@ -24,7 +24,7 @@ int main() {
   std::cin >> classNumber;
   std::vector<int> rolls;
   ClearScreen();
-  std::cout << "Do you want to roll for stats or use custom stats? (Y or N)"
+  std::cout << "Do you want to roll for stats? (Y or N)"
             << std::endl;
   char choice;
   std::cin >> choice;
